@@ -5,7 +5,7 @@ Contains TestData class.
 from typing import Any, Dict
 
 
-class TestDataClass:
+class DataClass:
     """
     Class for easier usage of test data provided by JSON. Instance's attributes
     correspond with test data keys and attributes' values correspond with
@@ -17,8 +17,8 @@ class TestDataClass:
                               "type_len": 2
                             }
 
-    test_data_instance: TestDataClass =
-                    TestDataClass(test_data_set.keys(), test_data_set.values())
+    test_data_instance: DataClass =
+                    DataClass(test_data_set.keys(), test_data_set.values())
 
         >> test_data_instance.product_name
         >> 'Blackberry'

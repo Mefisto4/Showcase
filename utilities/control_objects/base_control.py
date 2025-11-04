@@ -11,6 +11,8 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from utilities.logger import get_logger
+
 
 class _BaseControl(ABC):
     """
@@ -27,6 +29,7 @@ class _BaseControl(ABC):
         self.locator = locator
         self.web_element: WebElement = self.driver.find_element(*self.locator)
         self.wait = WebDriverWait(self.driver, 5)
+        self.logger = get_logger(__name__)
 
     def __str__(self) -> str:
         return f"<WebElement: {self.locator}>"
@@ -37,6 +40,7 @@ class _BaseControl(ABC):
 
         :return: True if element is displayed, False otherwise.
         """
+        self.logger.debug("Check '.is_displayed()' for %s", self)
         return self.web_element.is_displayed()
 
     def is_enabled(self) -> bool:
@@ -45,6 +49,7 @@ class _BaseControl(ABC):
 
         :return: True if element is enabled, False otherwise.
         """
+        self.logger.debug("Check '.is_enabled()' for %s", self)
         return self.web_element.is_enabled()
 
     def is_present(self) -> bool:
@@ -53,6 +58,7 @@ class _BaseControl(ABC):
 
         :return: True if element is present, False otherwise.
         """
+        self.logger.debug("Check '.is_present()' for %s", self)
         if self.wait.until(expected_conditions.presence_of_element_located(self.locator)):
             return True
         return False
@@ -67,7 +73,9 @@ class _BaseControl(ABC):
             """
             Wait for the element to be present in order to perform actions.
             """
+            self.logger.debug(f"Pre-action for {self}")
             if self.is_present():
+                self.logger.debug("Pre-action: SUCCESS")
                 return func(self, *args, **kwargs)
             raise AttributeError(f"{self} is not present")
 
@@ -80,6 +88,7 @@ class _BaseControl(ABC):
 
         :return: None
         """
+        self.logger.debug("Click element %s", self)
         self.web_element.click()
 
     def hover_over(self) -> None:
@@ -88,5 +97,6 @@ class _BaseControl(ABC):
 
         :return: None
         """
+        self.logger.debug("Hover over element %s", self)
         action = ActionChains(self.driver)
         action.move_to_element(self.web_element).perform()

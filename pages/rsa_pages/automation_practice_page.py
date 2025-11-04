@@ -16,6 +16,7 @@ from utilities.control_objects.label import Label
 from utilities.control_objects.link import Link
 from utilities.control_objects.table import HeaderBodyTableStrategy, HeadingsTableStrategy, Table
 from utilities.control_objects.textbox import Textbox
+from utilities.logger import get_logger
 
 
 class AutomationPracticePage(BasePage):
@@ -35,6 +36,7 @@ class AutomationPracticePage(BasePage):
         """
         super().__init__(driver, url)
         self._locators = _AutomationPracticePageLocators
+        self.logger = get_logger(__name__)
 
     @property
     def radiobutton_1(self) -> Radiobutton:

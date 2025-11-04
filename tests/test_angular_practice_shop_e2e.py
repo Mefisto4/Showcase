@@ -9,7 +9,7 @@ import pytest
 from selenium.common import NoSuchElementException
 
 from pages.rsa_pages.angular_practice_shop_page import AngularPracticeShopPage
-from utilities.test_data_class import TestDataClass
+from utilities.data_class import DataClass
 
 TEST_DATA_PATH = "./test_data/test_angular_practice_shop_e2e.json"
 with open(file=TEST_DATA_PATH, encoding="utf-8") as json_file:
@@ -42,12 +42,12 @@ class TestAngularPracticeShopOrderBasic:
         Test data fixture.
 
         :param test_data_set: dict
-        :return: TestDataClass()
+        :return: DataClass()
                         .product_name
                         .delivery_country
                         .type_len
         """
-        return TestDataClass(test_data_set)
+        return DataClass(test_data_set)
 
     def test_add_product_to_cart(self, test_data):
         """Test if product is added to cart."""
@@ -65,7 +65,7 @@ class TestAngularPracticeShopOrderBasic:
         assert product.name == test_data.product_name
         assert product.quantity == test_data.product_quantity
         assert product.price == test_data.product_price
-        assert product.total == test_data.product_price
+        assert product.total_price == test_data.product_price
         assert checkout_view.get_total_price() == test_data.product_price
 
     def test_delivery_view(self, test_data):
@@ -107,12 +107,12 @@ class TestAngularPracticeShopOrderWithChanges:
         Test data fixture.
 
         :param test_data_set: dict
-        :return: TestDataClass()
+        :return: DataClass()
                         .product_name
                         .delivery_country
                         .type_len
         """
-        return TestDataClass(test_data_set)
+        return DataClass(test_data_set)
 
     def _verify_cart(self, expected_data: Dict[str, Any]):
         products = self.page.checkout_view.get_products()  # type: ignore[attr-defined]
@@ -121,15 +121,15 @@ class TestAngularPracticeShopOrderWithChanges:
             assert product.name in expected_data.keys()
             assert product.quantity == expected_data[product.name][0]
             assert product.price == expected_data[product.name][1]
-            assert product.total == expected_data[product.name][0] * expected_data[product.name][1]
-            total += product.total
+            assert product.total_price == expected_data[product.name][0] * expected_data[product.name][1]
+            total += product.total_price
         assert total == self.page.checkout_view.get_total_price()  # type: ignore[attr-defined]
 
     def _modify_quantity(self, new_data: Dict[str, Any]):
         products = self.page.checkout_view.get_products()  # type: ignore[attr-defined]
         for i in products:
             if i.name in new_data.keys():
-                i.change_quantity(new_data[i.name][0])
+                i.set_quantity(new_data[i.name][0])
 
     def test_add_products_to_cart(self, test_data):
         """Test if multiple products can be added to cart."""
@@ -209,12 +209,12 @@ class TestAngularPracticeShopOrderWithRemovals:
         Test data fixture.
 
         :param test_data_set: dict
-        :return: TestDataClass()
+        :return: DataClass()
                         .product_name
                         .delivery_country
                         .type_len
         """
-        return TestDataClass(test_data_set)
+        return DataClass(test_data_set)
 
     def test_add_products_to_cart(self, test_data):
         """Test if multiple products can be added to cart."""

@@ -4,6 +4,8 @@ Contains BasePage class as a creator class for Page Objects factory pattern
 
 from selenium.webdriver.remote.webdriver import WebDriver
 
+from utilities.logger import get_logger
+
 
 class BasePage:
     """
@@ -20,6 +22,7 @@ class BasePage:
         """
         self.driver = driver
         self.url = url
+        self.logger = get_logger(__name__)
 
     def go_to(self) -> None:
         """
@@ -27,6 +30,7 @@ class BasePage:
 
         :return: None
         """
+        self.logger.debug("Go to '%s'", self.url)
         self.driver.get(self.url)
 
     def get_title(self) -> str:
@@ -35,6 +39,7 @@ class BasePage:
 
         :return: page title
         """
+        self.logger.debug("Get title for %s", self)
         return self.driver.title
 
     def get_height(self) -> int:
@@ -43,6 +48,7 @@ class BasePage:
 
         :return: page height in [px]
         """
+        self.logger.debug("Get height for %s", self)
         height = self.driver.execute_script("return document.body.scrollHeight")
         if isinstance(height, int):
             return height
@@ -54,6 +60,7 @@ class BasePage:
 
         :return: page width in [px]
         """
+        self.logger.debug("Get width for %s", self)
         width = self.driver.execute_script("return document.body.scrollWidth")
         if isinstance(width, int):
             return width
@@ -67,6 +74,7 @@ class BasePage:
         :param y: vertical value
         :return: None
         """
+        self.logger.debug("Scroll to x:'%s', y:'%s' action for %s", x, y, self)
         self.driver.execute_script(f"window.scrollTo({x}, {y});")
 
     def scroll_to_bottom(self) -> None:
@@ -75,6 +83,7 @@ class BasePage:
 
         :return: None
         """
+        self.logger.debug("Scroll to bottom action for %s", self)
         self.scroll(y=self.get_height())
 
     def scroll_to_top(self) -> None:
@@ -83,4 +92,5 @@ class BasePage:
 
         :return: None
         """
+        self.logger.debug("Scroll to top action for %s", self)
         self.scroll()
