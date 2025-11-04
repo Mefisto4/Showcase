@@ -186,7 +186,7 @@ class TestAngularPracticeShopOrderWithChanges:
             if i.name in test_data.product_minus.keys():
                 assert i.quantity >= 0, "Quantity of a product cannot be negative."
 
-    def test_checkout_view_continue_shopping(self):
+    def test_checkout_view_continue_shopping(self, test_data):  # pylint: disable=unused-argument
         """Test if 'Continue Shopping' button navigates back to shop page with cart content intact."""
         self.page.checkout_view.continue_shopping_button.click()
 
@@ -239,6 +239,6 @@ class TestAngularPracticeShopOrderWithRemovals:
 
         assert self.page.checkout_view.get_total_price() == test_data.total_final
 
-    def test_checkout_view_proceed(self):
+    def test_checkout_view_proceed(self, test_data):  # pylint: disable=unused-argument
         """Test if user cannot proceed to delivery with empty cart."""
         assert not self.page.checkout_view.checkout_button.is_enabled(), "Checkout button should be inactive."
