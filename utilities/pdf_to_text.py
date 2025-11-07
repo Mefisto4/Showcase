@@ -2,7 +2,7 @@
 Simple tool for PDF -> TXT conversion. Imitates ATS (Applicant Tracking System) parser.
 """
 
-import fitz
+import pymupdf
 
 
 def convert_pdf_to_text(pdf_file: str, output_file: str, print_output: bool = False):
@@ -14,7 +14,7 @@ def convert_pdf_to_text(pdf_file: str, output_file: str, print_output: bool = Fa
     :param print_output: should converted text be printed out in console?
     :return: None
     """
-    pdf = fitz.open(pdf_file)
+    pdf = pymupdf.open(pdf_file)
     with open(output_file, "wb", encoding="utf-8") as text_file:
         for page in pdf:  # iterate the document pages
             text = page.get_text().encode("utf8")  # get plain text (is in UTF-8)
