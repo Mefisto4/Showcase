@@ -86,6 +86,7 @@ def browser_instance(request, logging_tool) -> Generator[TestTools]:  # pylint: 
     browser_name = request.config.getoption("--browser-name")
     tools.logger.info(f"Browser name: {browser_name}.")
 
+    driver: WebDriver | None = None
     if browser_name == "firefox":
         driver = webdriver.Firefox()
     elif browser_name == "safari":
