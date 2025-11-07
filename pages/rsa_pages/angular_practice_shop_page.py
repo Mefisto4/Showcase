@@ -9,14 +9,15 @@ from typing import List
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
-from selenium.webdriver.remote.webelement import WebElement
 
 from pages.base_page import BasePage
 from pages.rsa_pages import PROTO_COMMERCE_SHOP_PAGE
+from utilities.base_product import _BaseProduct
 from utilities.control_objects.button import Button
 from utilities.control_objects.checkbox_radiobutton import Checkbox
 from utilities.control_objects.dropdown import DropdownDynamic
 from utilities.control_objects.label import Label
+from utilities.logger import get_logger
 
 
 class _AngularPracticeShopPage(BasePage):
@@ -47,6 +48,7 @@ class AngularPracticeShopPage(_AngularPracticeShopPage):
         """
         super().__init__(driver)
         self._locators = _AngularPracticeShopPageLocators
+        self.logger = get_logger(__name__)
 
     @property
     def checkout_button(self) -> Button:
@@ -90,6 +92,7 @@ class AngularPracticeShopPage(_AngularPracticeShopPage):
         :param product_name: product available on the page to be added to the cart
         :return: None
         """
+        self.logger.debug("Add product '%s' to cart", product_name)
         for product in self.driver.find_elements(By.XPATH, "//div[@class='card h-100']"):
             name = product.find_element(By.XPATH, "div/h4/a").text
             if name == product_name:
@@ -103,6 +106,7 @@ class AngularPracticeShopPage(_AngularPracticeShopPage):
 
         :return: number of products in the cart.
         """
+        self.logger.debug("Get number of products in the cart")
         amount = self.checkout_button.web_element.text
         return int(amount.split("(")[1].split(")")[0].strip(" "))
 
@@ -112,21 +116,15 @@ class AngularPracticeShopPage(_AngularPracticeShopPage):
 
         :return: CheckoutViewPage object.
         """
+        self.logger.debug("Go to CheckoutViewPage")
         self.checkout_button.click()
         return self.checkout_view
 
 
-class _CheckoutProduct:
+class _CheckoutProduct(_BaseProduct):
     """
     Represents product details from checkout view page table.
     """
-
-    def __init__(self, web_element: WebElement) -> None:
-        """
-
-        :param web_element: web element of <tr>
-        """
-        self.web_element = web_element
 
     @property
     def name(self) -> str:
@@ -135,6 +133,7 @@ class _CheckoutProduct:
 
         :return: str
         """
+        self.logger.debug("Get product name")
         return self.web_element.find_element(By.CSS_SELECTOR, "td:nth-child(1) .media-body h4 a").text
 
     @property
@@ -144,6 +143,7 @@ class _CheckoutProduct:
 
         :return: float
         """
+        self.logger.debug("Get product quantity")
         value = self.web_element.find_element(By.CSS_SELECTOR, "input[class='form-control']").get_attribute("value")
         if isinstance(value, str):
             return float(value)
@@ -156,18 +156,20 @@ class _CheckoutProduct:
 
         :return: float
         """
+        self.logger.debug("Get product price")
         value = self.web_element.find_element(By.CSS_SELECTOR, "td:nth-child(3)").get_attribute("textContent")
         if isinstance(value, str):
             return float(value.split(" ")[1])
         raise TypeError(f"Received unexpected value type:\n TYPE: {type(value)}\n EXPECTED: <class 'str'>\n")
 
     @property
-    def total(self) -> float:
+    def total_price(self) -> float:
         """
-        Returns product total price - should be equal to (quantity * price).
+        Returns product total_price price - should be equal to (quantity * price).
 
         :return: float
         """
+        self.logger.debug("Get product total price")
         value = self.web_element.find_element(By.CSS_SELECTOR, "td:nth-child(4)").get_attribute("textContent")
         if isinstance(value, str):
             return float(value.split(" ")[1])
@@ -179,15 +181,17 @@ class _CheckoutProduct:
 
         :return: None
         """
+        self.logger.debug("Remove product")
         self.web_element.find_element(By.CSS_SELECTOR, "button[class='btn btn-danger']").click()
 
-    def change_quantity(self, quantity: float) -> None:
+    def set_quantity(self, quantity: float) -> None:
         """
         Changes product quantity.
 
         :param quantity: quantity value to set
         :return: None
         """
+        self.logger.debug("Set product quantity to '%s'", quantity)
         elem = self.web_element.find_element(By.CSS_SELECTOR, "input[class='form-control']")
         elem.clear()
         elem.send_keys(str(quantity))
@@ -209,6 +213,7 @@ class CheckoutViewPage(_AngularPracticeShopPage):
         """
         super().__init__(driver)
         self._locators = _CheckoutViewLocators
+        self.logger = get_logger(__name__)
 
     @property
     def checkout_button(self) -> Button:
@@ -231,8 +236,10 @@ class CheckoutViewPage(_AngularPracticeShopPage):
     def get_products(self) -> List[_CheckoutProduct]:
         """
         Returns list of the products from checkout view.
+
         :return: list of _CheckoutProduct
         """
+        self.logger.debug("Get list of _CheckoutProduct")
         elems = self.driver.find_elements(By.XPATH, "//input[@class='form-control']/parent::td/parent::tr")
         return [_CheckoutProduct(elem) for elem in elems]
 
@@ -242,15 +249,17 @@ class CheckoutViewPage(_AngularPracticeShopPage):
 
         :return: DeliveryLocationViewPage object.
         """
+        self.logger.debug("Go to DeliveryLocationViewPage")
         self.checkout_button.click()
         return DeliveryLocationViewPage(self.driver)
 
     def get_total_price(self) -> float:
         """
-        Returns cart total price - should be equal to sum of total prices of each product.
+        Returns cart total_price price - should be equal to sum of total_price prices of each product.
 
         :return: float
         """
+        self.logger.debug("Get total price")
         value = self.driver.find_element(By.CSS_SELECTOR, "td[class='text-right'] h3").get_attribute("textContent")
         if isinstance(value, str):
             return float(value.split(" ")[1])
@@ -265,6 +274,7 @@ class DeliveryLocationViewPage(_AngularPracticeShopPage):
     def __init__(self, driver: WebDriver) -> None:
         super().__init__(driver)
         self._locators = _DeliveryLocationViewPageLocators
+        self.logger = get_logger(__name__)
 
     @property
     def delivery_location_dropdown(self) -> DropdownDynamic:

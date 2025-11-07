@@ -2,7 +2,7 @@
 Configuration file for pytest fixtures.
 """
 
-import logging
+import os
 from logging import Logger
 from typing import Generator
 
@@ -11,6 +11,8 @@ from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+
+from utilities.logger import LOGGER_FILE_PATH, get_logger
 
 
 def pytest_addoption(parser) -> None:
@@ -60,17 +62,9 @@ def logging_tool(test_tools) -> Generator[TestTools]:  # pylint: disable=redefin
     :param test_tools: TestTools()
     :return: TestTools()
     """
-    logger = logging.getLogger(__name__)
-    formatter = logging.Formatter(
-        fmt="%(asctime)s - %(name)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
-    )
-
-    file_handler = logging.FileHandler("reports/console-logs.log", mode="w", encoding="utf-8")
-    file_handler.setFormatter(formatter)
-    file_handler.setLevel(logging.DEBUG)
-    logger.addHandler(file_handler)
-
-    test_tools.logger = logger
+    if os.path.exists(LOGGER_FILE_PATH):
+        os.remove(LOGGER_FILE_PATH)
+    test_tools.logger = get_logger(__name__)
 
     test_tools.logger.info("Logging started.")
     yield test_tools

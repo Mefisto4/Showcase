@@ -9,7 +9,7 @@ import pytest
 from selenium.common import NoSuchElementException
 
 from pages.rsa_pages.angular_practice_shop_page import AngularPracticeShopPage
-from utilities.test_data_class import TestDataClass
+from utilities.data_class import DataClass
 
 TEST_DATA_PATH = "./test_data/test_angular_practice_shop_e2e.json"
 with open(file=TEST_DATA_PATH, encoding="utf-8") as json_file:
@@ -42,22 +42,33 @@ class TestAngularPracticeShopOrderBasic:
         Test data fixture.
 
         :param test_data_set: dict
-        :return: TestDataClass()
+        :return: DataClass()
                         .product_name
                         .delivery_country
                         .type_len
         """
-        return TestDataClass(test_data_set)
+        return DataClass(test_data_set)
+
+    def test_setup(self, test_data):
+        """Start test."""
+        self.tools.logger.info("Start basic order scenario test for Angular Practice Shop page.")
+        self.tools.logger.info("Test product name: %s", test_data.product_name)
+        self.page.go_to()
+
+        assert self.page.get_title() == "ProtoCommerce"
 
     def test_add_product_to_cart(self, test_data):
         """Test if product is added to cart."""
-        self.page.go_to()
+        self.tools.logger.info("Add product to cart and verify if number of products in cart is correct.")
         self.page.add_product_to_cart(test_data.product_name)
 
         assert self.page.get_number_of_products_in_cart() == test_data.product_quantity
 
     def test_checkout_view(self, test_data):
         """Test if checkout view shows correct information."""
+        self.tools.logger.info(
+            "Go to checkout page and verify if cart info (name, quantity, price and total price) is correct."
+        )
         checkout_view = self.page.go_to_checkout()
 
         product = checkout_view.get_products()[0]
@@ -65,11 +76,12 @@ class TestAngularPracticeShopOrderBasic:
         assert product.name == test_data.product_name
         assert product.quantity == test_data.product_quantity
         assert product.price == test_data.product_price
-        assert product.total == test_data.product_price
+        assert product.total_price == test_data.product_price
         assert checkout_view.get_total_price() == test_data.product_price
 
     def test_delivery_view(self, test_data):
         """Test if delivery location can be chosen."""
+        self.tools.logger.info("Go to delivery page and verify if delivery location is can be selected.")
         delivery_view = self.page.checkout_view.go_to_delivery()
         if test_data.type_len < 0:
             delivery_view.delivery_location_dropdown.select(test_data.delivery_country)
@@ -82,6 +94,7 @@ class TestAngularPracticeShopOrderBasic:
 
     def test_purchase_view(self, test_data):
         """Test if purchase can be done successfully."""
+        self.tools.logger.info("Finalize order and verify if purchase has been successful.")
         self.page.delivery_view.terms_and_conditions_checkbox.select()
         self.page.delivery_view.purchase_button.click()
         assert self.page.delivery_view.alert_message_label.is_displayed()
@@ -107,12 +120,12 @@ class TestAngularPracticeShopOrderWithChanges:
         Test data fixture.
 
         :param test_data_set: dict
-        :return: TestDataClass()
+        :return: DataClass()
                         .product_name
                         .delivery_country
                         .type_len
         """
-        return TestDataClass(test_data_set)
+        return DataClass(test_data_set)
 
     def _verify_cart(self, expected_data: Dict[str, Any]):
         products = self.page.checkout_view.get_products()  # type: ignore[attr-defined]
@@ -121,19 +134,28 @@ class TestAngularPracticeShopOrderWithChanges:
             assert product.name in expected_data.keys()
             assert product.quantity == expected_data[product.name][0]
             assert product.price == expected_data[product.name][1]
-            assert product.total == expected_data[product.name][0] * expected_data[product.name][1]
-            total += product.total
+            assert product.total_price == expected_data[product.name][0] * expected_data[product.name][1]
+            total += product.total_price
         assert total == self.page.checkout_view.get_total_price()  # type: ignore[attr-defined]
 
     def _modify_quantity(self, new_data: Dict[str, Any]):
         products = self.page.checkout_view.get_products()  # type: ignore[attr-defined]
         for i in products:
             if i.name in new_data.keys():
-                i.change_quantity(new_data[i.name][0])
+                i.set_quantity(new_data[i.name][0])
+
+    def test_setup(self, test_data):  # pylint: disable=unused-argument
+        """Start test."""
+        self.tools.logger.info(
+            "Start order with products quantities changes scenario test for Angular Practice Shop page."
+        )
+        self.page.go_to()
+
+        assert self.page.get_title() == "ProtoCommerce"
 
     def test_add_products_to_cart(self, test_data):
         """Test if multiple products can be added to cart."""
-        self.page.go_to()
+        self.tools.logger.info("Add multiple products to cart and verify if number of products in cart is correct.")
         for product in test_data.products.keys():
             self.page.add_product_to_cart(product)
 
@@ -141,6 +163,7 @@ class TestAngularPracticeShopOrderWithChanges:
 
     def test_checkout_view_initial(self, test_data):
         """Test if checkout view shows correct information."""
+        self.tools.logger.info("Go to checkout page and verify if cart info is correct.")
         checkout_view = self.page.go_to_checkout()
 
         products = checkout_view.get_products()
@@ -151,6 +174,7 @@ class TestAngularPracticeShopOrderWithChanges:
 
     def test_checkout_view_add_product(self, test_data):
         """Test if the product quantity can be increased."""
+        self.tools.logger.info("Increase product quantity and verify if cart info is updated correctly.")
         self._modify_quantity(test_data.product_more)
 
         expected_data = test_data.products
@@ -160,6 +184,7 @@ class TestAngularPracticeShopOrderWithChanges:
 
     def test_checkout_view_zero_product(self, test_data):
         """Test if the product quantity can be equal to 0."""
+        self.tools.logger.info("Decrease product quantity to 0 and verify if cart info is updated correctly.")
         self._modify_quantity(test_data.product_zero)
 
         expected_data = test_data.products
@@ -170,6 +195,9 @@ class TestAngularPracticeShopOrderWithChanges:
 
     def test_checkout_view_fraction_product(self, test_data):
         """Test if the product quantity cannot be fractional."""
+        self.tools.logger.info(
+            "Change product quantity to fractional value and verify if cart info is updated correctly."
+        )
         self._modify_quantity(test_data.product_fraction)
 
         products = self.page.checkout_view.get_products()
@@ -179,6 +207,9 @@ class TestAngularPracticeShopOrderWithChanges:
 
     def test_checkout_view_negative_product(self, test_data):
         """Test if the product quantity cannot be negative."""
+        self.tools.logger.info(
+            "Change product quantity to negative value and verify if cart info is updated correctly."
+        )
         self._modify_quantity(test_data.product_minus)
 
         products = self.page.checkout_view.get_products()
@@ -186,8 +217,11 @@ class TestAngularPracticeShopOrderWithChanges:
             if i.name in test_data.product_minus.keys():
                 assert i.quantity >= 0, "Quantity of a product cannot be negative."
 
-    def test_checkout_view_continue_shopping(self):
+    def test_checkout_view_continue_shopping(self, test_data):  # pylint: disable=unused-argument
         """Test if 'Continue Shopping' button navigates back to shop page with cart content intact."""
+        self.tools.logger.info(
+            "Check if 'Continue Shopping' button navigates back to shop page with cart content intact."
+        )
         self.page.checkout_view.continue_shopping_button.click()
 
         assert self.page.get_number_of_products_in_cart() > 0, "Cart should not get reset."
@@ -209,16 +243,23 @@ class TestAngularPracticeShopOrderWithRemovals:
         Test data fixture.
 
         :param test_data_set: dict
-        :return: TestDataClass()
+        :return: DataClass()
                         .product_name
                         .delivery_country
                         .type_len
         """
-        return TestDataClass(test_data_set)
+        return DataClass(test_data_set)
+
+    def test_setup(self, test_data):  # pylint: disable=unused-argument
+        """Start test."""
+        self.tools.logger.info("Start order with products removal scenario test for Angular Practice Shop page.")
+        self.page.go_to()
+
+        assert self.page.get_title() == "ProtoCommerce"
 
     def test_add_products_to_cart(self, test_data):
         """Test if multiple products can be added to cart."""
-        self.page.go_to()
+        self.tools.logger.info("Add multiple products to cart and verify if number of products in cart is correct.")
         for product in test_data.products:
             self.page.add_product_to_cart(product)
 
@@ -226,6 +267,7 @@ class TestAngularPracticeShopOrderWithRemovals:
 
     def test_checkout_view_initial(self, test_data):
         """Test if checkout view shows correct information."""
+        self.tools.logger.info("Go to checkout page and verify if cart info is correct.")
         checkout_view = self.page.go_to_checkout()
         products = checkout_view.get_products()
 
@@ -233,12 +275,14 @@ class TestAngularPracticeShopOrderWithRemovals:
 
     def test_checkout_view_remove_products(self, test_data):
         """Test if the products can be removed from cart."""
+        self.tools.logger.info("Remove products from cart and verify if cart info is updated correctly.")
         products = self.page.checkout_view.get_products()
         for product in products:
             product.remove()
 
         assert self.page.checkout_view.get_total_price() == test_data.total_final
 
-    def test_checkout_view_proceed(self):
+    def test_checkout_view_proceed(self, test_data):  # pylint: disable=unused-argument
         """Test if user cannot proceed to delivery with empty cart."""
+        self.tools.logger.info("Verify whether user can proceed to delivery with empty cart.")
         assert not self.page.checkout_view.checkout_button.is_enabled(), "Checkout button should be inactive."

@@ -12,6 +12,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 
 from utilities.control_objects.base_control import _BaseControl
+from utilities.logger import get_logger
 
 
 class Table(_BaseControl):
@@ -27,6 +28,8 @@ class Table(_BaseControl):
         """
         super().__init__(driver, locator)
         self._strategy = strategy()
+        self.logger = get_logger(__name__)
+        self.logger.debug("Strategy set to '%s'", strategy.__name__)
 
     def get_headers(self) -> List[str] | None:
         """
@@ -34,6 +37,7 @@ class Table(_BaseControl):
 
         :return: list of header values
         """
+        self.logger.debug("Get headers action for %s", self)
         return self._strategy.get_headers(self.web_element)
 
     def get_body(self) -> List[List[str]] | None:
@@ -42,6 +46,7 @@ class Table(_BaseControl):
 
         :return: list of rows, where each row represents a table data
         """
+        self.logger.debug("Get body action for %s", self)
         return self._strategy.get_body(self.web_element)
 
     def get_table(self) -> List[List[str]]:
@@ -50,6 +55,7 @@ class Table(_BaseControl):
 
         :return: list of rows, where each row is a list of cell values (with headers included)
         """
+        self.logger.debug("Get table action for %s", self)
         result = []
         if headers := self.get_headers():
             result.append(headers)

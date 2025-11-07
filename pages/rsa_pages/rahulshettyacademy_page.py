@@ -8,6 +8,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from pages.base_page import BasePage
 from pages.rsa_pages import MAIN_PAGE
 from utilities.control_objects.link import Link
+from utilities.logger import get_logger
 
 
 class RahulShettyAcademyPage(BasePage):
@@ -25,6 +26,7 @@ class RahulShettyAcademyPage(BasePage):
         """
         super().__init__(driver, url)
         self._locators = _RahulShettyAcademyPageLocators
+        self.logger = get_logger(__name__)
 
     @property
     def courses_link(self) -> Link:

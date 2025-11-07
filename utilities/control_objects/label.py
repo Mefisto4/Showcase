@@ -2,7 +2,12 @@
 Represents read-only controls.
 """
 
+from typing import Tuple
+
+from selenium.webdriver.remote.webdriver import WebDriver
+
 from utilities.control_objects.base_control import _BaseControl
+from utilities.logger import get_logger
 
 
 class Label(_BaseControl):
@@ -10,10 +15,20 @@ class Label(_BaseControl):
     Represents label elements.
     """
 
+    def __init__(self, driver: WebDriver, locator: Tuple[str, str]) -> None:
+        """
+
+        :param driver: WebDriver for current browser, i.e.: webdriver.Chrome()
+        :param locator: pair of By strategy and locator, i.e.: (By.CSS_SELECTOR, "input[value='admin']")
+        """
+        super().__init__(driver, locator)
+        self.logger = get_logger(__name__)
+
     def get_text(self) -> str:
         """
         Gets text from label.
 
         :return: string text from label
         """
+        self.logger.debug("Get text action for %s", self)
         return self.web_element.text

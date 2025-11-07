@@ -8,6 +8,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 
 from pages.base_page import BasePage
+from utilities.logger import get_logger
 
 
 class IFrame:
@@ -26,10 +27,13 @@ class IFrame:
         self.locator = locator
         self.web_element: WebElement = self.driver.find_element(*self.locator)
         self.page = page
+        self.logger = get_logger(__name__)
 
     def __enter__(self) -> BasePage:
+        self.logger.debug("Enter context manager for %s", self.locator)
         self.driver.switch_to.frame(self.web_element)
         return self.page(driver=self.driver, url=self.page.URL)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        self.logger.debug("Exit context manager for %s", self.locator)
         self.driver.switch_to.default_content()
