@@ -12,7 +12,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 
 from pages.base_page import BasePage
 from pages.rsa_pages import PROTO_COMMERCE_SHOP_PAGE
-from utilities.base_product import _BaseProduct
+from utilities.base_product import BaseProduct
 from utilities.control_objects.button import Button
 from utilities.control_objects.checkbox_radiobutton import Checkbox
 from utilities.control_objects.dropdown import DropdownDynamic
@@ -121,7 +121,7 @@ class AngularPracticeShopPage(_AngularPracticeShopPage):
         return self.checkout_view
 
 
-class _CheckoutProduct(_BaseProduct):
+class _CheckoutProduct(BaseProduct):
     """
     Represents product details from checkout view page table.
     """
