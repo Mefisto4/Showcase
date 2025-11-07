@@ -13,6 +13,8 @@ jobs:
           python-version: '3.13'
       - name: Install MyPy
         run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
           pip install mypy
       - name: Analyze code with MyPy
         run: |
