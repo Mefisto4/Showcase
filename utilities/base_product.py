@@ -1,5 +1,5 @@
 """
-Contains _BaseProduct class as a creator class for Shopping Products factory pattern
+Contains BaseProduct class as a creator class for Shopping Products factory pattern
 """
 
 from abc import ABC, abstractmethod
@@ -9,9 +9,9 @@ from selenium.webdriver.remote.webelement import WebElement
 from utilities.logger import get_logger
 
 
-class _BaseProduct(ABC):
+class BaseProduct(ABC):
     """
-    _BaseProduct class as a parent (factory) for all shopping products in the framework.
+    BaseProduct class as a parent (factory) for all shopping products in the framework.
     """
 
     def __init__(self, web_element: WebElement) -> None:
