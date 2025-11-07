@@ -2,7 +2,8 @@
 Simple tool for PDF -> TXT conversion. Imitates ATS (Applicant Tracking System) parser.
 """
 
-import pymupdf
+# the 3rd party library below has missing library stubs or py.typed marker
+import pymupdf  # type: ignore[import-untyped]
 
 
 def convert_pdf_to_text(pdf_file: str, output_file: str, print_output: bool = False):
