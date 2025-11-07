@@ -1,0 +1,863 @@
+2025-11-07 21:16:45 :@: conftest :@: INFO :@: Logging started.
+2025-11-07 21:16:45 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:16:45 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:16:46 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:16:46 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:16:46 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:16:46 :@: conftest :@: INFO :@: Start basic order scenario test for Angular Practice Shop page.
+2025-11-07 21:16:46 :@: conftest :@: INFO :@: Test product name: Blackberry
+2025-11-07 21:16:46 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/angularpractice/shop'
+2025-11-07 21:16:48 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get title for <pages.rsa_pages.angular_practice_shop_page.AngularPracticeShopPage object at 0x000002099BFE2510>
+2025-11-07 21:16:48 :@: conftest :@: INFO :@: Add product to cart and verify if number of products in cart is correct.
+2025-11-07 21:16:48 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Blackberry' to cart
+2025-11-07 21:16:48 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get number of products in the cart
+2025-11-07 21:16:48 :@: conftest :@: INFO :@: Go to checkout page and verify if cart info (name, quantity, price and total price) is correct.
+2025-11-07 21:16:48 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to CheckoutViewPage
+2025-11-07 21:16:48 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:16:48 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:16:48 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:48 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:16:48 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:16:48 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:16:48 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:16:48 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:16:48 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:16:48 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get total price
+2025-11-07 21:16:48 :@: conftest :@: INFO :@: Go to delivery page and verify if delivery location is can be selected.
+2025-11-07 21:16:48 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to DeliveryLocationViewPage
+2025-11-07 21:16:48 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:16:48 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:16:48 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:48 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:16:48 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'country')>
+2025-11-07 21:16:48 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'country')>
+2025-11-07 21:16:48 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:48 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'Poland' by partial value 'po' action for <WebElement: ('id', 'country')>
+2025-11-07 21:16:48 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing 'po'
+2025-11-07 21:16:48 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:16:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option 'Poland'
+2025-11-07 21:16:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'country')>
+2025-11-07 21:16:53 :@: conftest :@: INFO :@: Finalize order and verify if purchase has been successful.
+2025-11-07 21:16:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:16:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:16:54 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:54 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Select action for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:16:54 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:16:54 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:16:54 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:16:54 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:54 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:16:54 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('class name', 'alert-success')>
+2025-11-07 21:16:54 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('class name', 'alert-success')>
+2025-11-07 21:16:54 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:16:54 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:16:54 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:54 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:16:59 :@: conftest :@: INFO :@: Start basic order scenario test for Angular Practice Shop page.
+2025-11-07 21:16:59 :@: conftest :@: INFO :@: Test product name: iphone X
+2025-11-07 21:16:59 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/angularpractice/shop'
+2025-11-07 21:16:59 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get title for <pages.rsa_pages.angular_practice_shop_page.AngularPracticeShopPage object at 0x000002099BFE2510>
+2025-11-07 21:16:59 :@: conftest :@: INFO :@: Add product to cart and verify if number of products in cart is correct.
+2025-11-07 21:16:59 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'iphone X' to cart
+2025-11-07 21:16:59 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get number of products in the cart
+2025-11-07 21:16:59 :@: conftest :@: INFO :@: Go to checkout page and verify if cart info (name, quantity, price and total price) is correct.
+2025-11-07 21:16:59 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to CheckoutViewPage
+2025-11-07 21:16:59 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:16:59 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:16:59 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:59 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:16:59 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:16:59 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:16:59 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:16:59 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:16:59 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:16:59 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get total price
+2025-11-07 21:16:59 :@: conftest :@: INFO :@: Go to delivery page and verify if delivery location is can be selected.
+2025-11-07 21:16:59 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to DeliveryLocationViewPage
+2025-11-07 21:16:59 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:16:59 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:16:59 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:59 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:16:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'country')>
+2025-11-07 21:16:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'country')>
+2025-11-07 21:16:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:16:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'India' by partial value 'ind' action for <WebElement: ('id', 'country')>
+2025-11-07 21:16:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing 'ind'
+2025-11-07 21:16:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:17:04 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option 'India'
+2025-11-07 21:17:04 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'country')>
+2025-11-07 21:17:04 :@: conftest :@: INFO :@: Finalize order and verify if purchase has been successful.
+2025-11-07 21:17:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Select action for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:04 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('class name', 'alert-success')>
+2025-11-07 21:17:04 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('class name', 'alert-success')>
+2025-11-07 21:17:04 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:04 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:04 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:09 :@: conftest :@: INFO :@: Start basic order scenario test for Angular Practice Shop page.
+2025-11-07 21:17:09 :@: conftest :@: INFO :@: Test product name: Samsung Note 8
+2025-11-07 21:17:09 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/angularpractice/shop'
+2025-11-07 21:17:10 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get title for <pages.rsa_pages.angular_practice_shop_page.AngularPracticeShopPage object at 0x000002099BFE2510>
+2025-11-07 21:17:10 :@: conftest :@: INFO :@: Add product to cart and verify if number of products in cart is correct.
+2025-11-07 21:17:10 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Samsung Note 8' to cart
+2025-11-07 21:17:10 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get number of products in the cart
+2025-11-07 21:17:10 :@: conftest :@: INFO :@: Go to checkout page and verify if cart info (name, quantity, price and total price) is correct.
+2025-11-07 21:17:10 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to CheckoutViewPage
+2025-11-07 21:17:10 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:10 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:10 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:10 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:10 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:10 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:10 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:10 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:10 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:10 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get total price
+2025-11-07 21:17:10 :@: conftest :@: INFO :@: Go to delivery page and verify if delivery location is can be selected.
+2025-11-07 21:17:10 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to DeliveryLocationViewPage
+2025-11-07 21:17:10 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:17:10 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:17:10 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:10 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:17:10 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'country')>
+2025-11-07 21:17:10 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'country')>
+2025-11-07 21:17:10 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:10 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'Poland' action for <WebElement: ('id', 'country')>
+2025-11-07 21:17:10 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing 'Poland'
+2025-11-07 21:17:10 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:17:15 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option 'Poland'
+2025-11-07 21:17:15 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'country')>
+2025-11-07 21:17:15 :@: conftest :@: INFO :@: Finalize order and verify if purchase has been successful.
+2025-11-07 21:17:15 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:15 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Select action for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:15 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('class name', 'alert-success')>
+2025-11-07 21:17:15 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('class name', 'alert-success')>
+2025-11-07 21:17:15 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:15 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:15 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:20 :@: conftest :@: INFO :@: Start basic order scenario test for Angular Practice Shop page.
+2025-11-07 21:17:20 :@: conftest :@: INFO :@: Test product name: Nokia Edge
+2025-11-07 21:17:20 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/angularpractice/shop'
+2025-11-07 21:17:20 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get title for <pages.rsa_pages.angular_practice_shop_page.AngularPracticeShopPage object at 0x000002099BFE2510>
+2025-11-07 21:17:20 :@: conftest :@: INFO :@: Add product to cart and verify if number of products in cart is correct.
+2025-11-07 21:17:20 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Nokia Edge' to cart
+2025-11-07 21:17:20 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get number of products in the cart
+2025-11-07 21:17:20 :@: conftest :@: INFO :@: Go to checkout page and verify if cart info (name, quantity, price and total price) is correct.
+2025-11-07 21:17:20 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to CheckoutViewPage
+2025-11-07 21:17:20 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:20 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:20 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:20 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:20 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:20 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:20 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:20 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:20 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:20 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get total price
+2025-11-07 21:17:20 :@: conftest :@: INFO :@: Go to delivery page and verify if delivery location is can be selected.
+2025-11-07 21:17:20 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to DeliveryLocationViewPage
+2025-11-07 21:17:20 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:17:20 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:17:20 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:20 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:17:20 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'country')>
+2025-11-07 21:17:20 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'country')>
+2025-11-07 21:17:20 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:20 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'India' action for <WebElement: ('id', 'country')>
+2025-11-07 21:17:20 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing 'India'
+2025-11-07 21:17:21 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:17:26 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option 'India'
+2025-11-07 21:17:26 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'country')>
+2025-11-07 21:17:26 :@: conftest :@: INFO :@: Finalize order and verify if purchase has been successful.
+2025-11-07 21:17:26 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:26 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Select action for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "div[class*='checkbox']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:26 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "input[type='submit']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('class name', 'alert-success')>
+2025-11-07 21:17:26 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('class name', 'alert-success')>
+2025-11-07 21:17:26 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:26 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:26 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[data-dismiss='alert']")>
+2025-11-07 21:17:31 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:17:33 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:17:33 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:17:33 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:17:34 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:17:34 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:17:34 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:17:34 :@: conftest :@: INFO :@: Start order with products quantities changes scenario test for Angular Practice Shop page.
+2025-11-07 21:17:34 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/angularpractice/shop'
+2025-11-07 21:17:36 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get title for <pages.rsa_pages.angular_practice_shop_page.AngularPracticeShopPage object at 0x000002099BFFF750>
+2025-11-07 21:17:36 :@: conftest :@: INFO :@: Add multiple products to cart and verify if number of products in cart is correct.
+2025-11-07 21:17:36 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Blackberry' to cart
+2025-11-07 21:17:36 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'iphone X' to cart
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Samsung Note 8' to cart
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Nokia Edge' to cart
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get number of products in the cart
+2025-11-07 21:17:37 :@: conftest :@: INFO :@: Go to checkout page and verify if cart info is correct.
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to CheckoutViewPage
+2025-11-07 21:17:37 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:37 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:37 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:37 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get total price
+2025-11-07 21:17:37 :@: conftest :@: INFO :@: Increase product quantity and verify if cart info is updated correctly.
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Set product quantity to '3.0'
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:37 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get total price
+2025-11-07 21:17:38 :@: conftest :@: INFO :@: Decrease product quantity to 0 and verify if cart info is updated correctly.
+2025-11-07 21:17:38 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Set product quantity to '0.0'
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product total price
+2025-11-07 21:17:38 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get total price
+2025-11-07 21:17:38 :@: conftest :@: INFO :@: Change product quantity to fractional value and verify if cart info is updated correctly.
+2025-11-07 21:17:38 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:38 :@: utilities.base_product :@: DEBUG :@: Set product quantity to '1.75'
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:39 :@: conftest :@: INFO :@: Change product quantity to negative value and verify if cart info is updated correctly.
+2025-11-07 21:17:39 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Set product quantity to '-2.0'
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:39 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product name
+2025-11-07 21:17:39 :@: utilities.base_product :@: DEBUG :@: Get product quantity
+2025-11-07 21:17:39 :@: conftest :@: INFO :@: Check if 'Continue Shopping' button navigates back to shop page with cart content intact.
+2025-11-07 21:17:39 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[contains(@class,'btn-default')]")>
+2025-11-07 21:17:39 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[contains(@class,'btn-default')]")>
+2025-11-07 21:17:39 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:39 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[contains(@class,'btn-default')]")>
+2025-11-07 21:17:39 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get number of products in the cart
+2025-11-07 21:17:39 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:17:41 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:17:41 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:17:41 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:17:42 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:17:42 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:17:42 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:17:42 :@: conftest :@: INFO :@: Start order with products removal scenario test for Angular Practice Shop page.
+2025-11-07 21:17:42 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/angularpractice/shop'
+2025-11-07 21:17:44 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get title for <pages.rsa_pages.angular_practice_shop_page.AngularPracticeShopPage object at 0x000002099C3F8190>
+2025-11-07 21:17:44 :@: conftest :@: INFO :@: Add multiple products to cart and verify if number of products in cart is correct.
+2025-11-07 21:17:44 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Blackberry' to cart
+2025-11-07 21:17:44 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'iphone X' to cart
+2025-11-07 21:17:44 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Samsung Note 8' to cart
+2025-11-07 21:17:45 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Add product 'Nokia Edge' to cart
+2025-11-07 21:17:45 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get number of products in the cart
+2025-11-07 21:17:45 :@: conftest :@: INFO :@: Go to checkout page and verify if cart info is correct.
+2025-11-07 21:17:45 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Go to CheckoutViewPage
+2025-11-07 21:17:45 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:45 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:45 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:45 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', "a[class*='btn-primary']")>
+2025-11-07 21:17:45 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:45 :@: conftest :@: INFO :@: Remove products from cart and verify if cart info is updated correctly.
+2025-11-07 21:17:45 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get list of _CheckoutProduct
+2025-11-07 21:17:45 :@: utilities.base_product :@: DEBUG :@: Remove product
+2025-11-07 21:17:45 :@: utilities.base_product :@: DEBUG :@: Remove product
+2025-11-07 21:17:45 :@: utilities.base_product :@: DEBUG :@: Remove product
+2025-11-07 21:17:45 :@: utilities.base_product :@: DEBUG :@: Remove product
+2025-11-07 21:17:45 :@: pages.rsa_pages.angular_practice_shop_page :@: DEBUG :@: Get total price
+2025-11-07 21:17:45 :@: conftest :@: INFO :@: Verify whether user can proceed to delivery with empty cart.
+2025-11-07 21:17:45 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_enabled()' for <WebElement: ('xpath', "//button[contains(@class,'btn-success')]")>
+2025-11-07 21:17:45 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:17:47 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:17:47 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:17:47 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:17:48 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:17:48 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:17:48 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:17:48 :@: conftest :@: INFO :@: Test if page opens.
+2025-11-07 21:17:48 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:17:53 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Get title for <pages.rsa_pages.automation_practice_page.AutomationPracticePage object at 0x000002099BE9ABA0>
+2025-11-07 21:17:53 :@: conftest :@: INFO :@: Test if radiobutton group set work correctly.
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio2']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio3']")>
+2025-11-07 21:17:53 :@: conftest :@: INFO :@: Test if radiobutton group set work correctly.
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Click element <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio2']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio3']")>
+2025-11-07 21:17:53 :@: conftest :@: INFO :@: Test if radiobutton group set work correctly.
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[value='radio2']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "input[value='radio2']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Click element <WebElement: ('css selector', "input[value='radio2']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio2']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio3']")>
+2025-11-07 21:17:53 :@: conftest :@: INFO :@: Test if radiobutton group set work correctly.
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[value='radio3']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', "input[value='radio3']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Click element <WebElement: ('css selector', "input[value='radio3']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio2']")>
+2025-11-07 21:17:53 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio3']")>
+2025-11-07 21:17:53 :@: conftest :@: INFO :@: Test if default state of dynamic dropdown is correct.
+2025-11-07 21:17:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:53 :@: conftest :@: INFO :@: Test if select by full value in dynamic dropdown works correctly.
+2025-11-07 21:17:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'Poland' action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing 'Poland'
+2025-11-07 21:17:53 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option 'Poland'
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:54 :@: conftest :@: INFO :@: Test if select by partial value in dynamic dropdown works correctly.
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'India' by partial value 'ind' action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing 'ind'
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option 'India'
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:54 :@: conftest :@: INFO :@: Test if incorrect value in dynamic dropdown cannot be selected.
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select '123' action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing '123'
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:17:54 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option '123'
+2025-11-07 21:17:59 :@: conftest :@: INFO :@: Test if default state of static dropdown is correct.
+2025-11-07 21:17:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:17:59 :@: conftest :@: INFO :@: Test if select value in static dropdown works correctly.
+2025-11-07 21:17:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:17:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:17:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:17:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'Option2' action for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:17:59 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:17:59 :@: conftest :@: INFO :@: Test if checkbox group set works correctly.
+2025-11-07 21:17:59 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:17:59 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:17:59 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:00 :@: conftest :@: INFO :@: Test if checkbox group set works correctly.
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Click element <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:00 :@: conftest :@: INFO :@: Test if checkbox group set works correctly.
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Click element <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:00 :@: conftest :@: INFO :@: Test if checkbox group set works correctly.
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Click element <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:00 :@: conftest :@: INFO :@: Test if checkbox group set works correctly.
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Click element <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption2')>
+2025-11-07 21:18:00 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:00 :@: conftest :@: INFO :@: Test if switching between browser windows works correctly.
+2025-11-07 21:18:00 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('id', 'openwindow')>
+2025-11-07 21:18:00 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'openwindow')>
+2025-11-07 21:18:00 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:00 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('id', 'openwindow')>
+2025-11-07 21:18:01 :@: conftest :@: INFO :@: Test if switching between browser tabs works correctly.
+2025-11-07 21:18:01 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('id', 'openwindow')>
+2025-11-07 21:18:01 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'openwindow')>
+2025-11-07 21:18:01 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:01 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('id', 'openwindow')>
+2025-11-07 21:18:02 :@: conftest :@: INFO :@: Test if alert window works correctly.
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Pre-action for <WebElement: ('id', 'name')>
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'name')>
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Set text 'TEXT 1' action for <WebElement: ('id', 'name')>
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Get text action for <WebElement: ('id', 'name')>
+2025-11-07 21:18:02 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('id', 'alertbtn')>
+2025-11-07 21:18:02 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'alertbtn')>
+2025-11-07 21:18:02 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:02 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('id', 'alertbtn')>
+2025-11-07 21:18:02 :@: conftest :@: INFO :@: Test if popup window works correctly.
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Pre-action for <WebElement: ('id', 'name')>
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'name')>
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Set text 'TEXT 2' action for <WebElement: ('id', 'name')>
+2025-11-07 21:18:02 :@: utilities.control_objects.textbox :@: DEBUG :@: Get text action for <WebElement: ('id', 'name')>
+2025-11-07 21:18:02 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('id', 'confirmbtn')>
+2025-11-07 21:18:02 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'confirmbtn')>
+2025-11-07 21:18:02 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:02 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('id', 'confirmbtn')>
+2025-11-07 21:18:02 :@: conftest :@: INFO :@: Test if web table headers works correctly.
+2025-11-07 21:18:02 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeadingsTableStrategy'
+2025-11-07 21:18:02 :@: utilities.control_objects.table :@: DEBUG :@: Get headers action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:18:02 :@: conftest :@: INFO :@: Test if web table body works correctly.
+2025-11-07 21:18:02 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeadingsTableStrategy'
+2025-11-07 21:18:02 :@: utilities.control_objects.table :@: DEBUG :@: Get body action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:18:02 :@: conftest :@: INFO :@: Test if web table as a whole works correctly.
+2025-11-07 21:18:02 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeadingsTableStrategy'
+2025-11-07 21:18:02 :@: utilities.control_objects.table :@: DEBUG :@: Get table action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:18:02 :@: utilities.control_objects.table :@: DEBUG :@: Get headers action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:18:02 :@: utilities.control_objects.table :@: DEBUG :@: Get body action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:18:02 :@: conftest :@: INFO :@: Test if fixed headers web table headers works correctly.
+2025-11-07 21:18:03 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeaderBodyTableStrategy'
+2025-11-07 21:18:03 :@: utilities.control_objects.table :@: DEBUG :@: Get headers action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:18:03 :@: conftest :@: INFO :@: Test if fixed headers web table body works correctly.
+2025-11-07 21:18:03 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeaderBodyTableStrategy'
+2025-11-07 21:18:03 :@: utilities.control_objects.table :@: DEBUG :@: Get body action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:18:03 :@: conftest :@: INFO :@: Test if fixed headers web table as a whole works correctly.
+2025-11-07 21:18:03 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeaderBodyTableStrategy'
+2025-11-07 21:18:03 :@: utilities.control_objects.table :@: DEBUG :@: Get table action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:18:03 :@: utilities.control_objects.table :@: DEBUG :@: Get headers action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:18:03 :@: utilities.control_objects.table :@: DEBUG :@: Get body action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:18:03 :@: conftest :@: INFO :@: Test if label works correctly.
+2025-11-07 21:18:03 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('xpath', '/html/body/div[3]/div[2]/fieldset[2]/div[2]')>
+2025-11-07 21:18:03 :@: conftest :@: INFO :@: Test if default state of hide/show textbox works correctly.
+2025-11-07 21:18:03 :@: utilities.control_objects.textbox :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('id', 'displayed-text')>
+2025-11-07 21:18:03 :@: conftest :@: INFO :@: Test if textbox hide option works correctly.
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:03 :@: utilities.control_objects.textbox :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('id', 'displayed-text')>
+2025-11-07 21:18:03 :@: conftest :@: INFO :@: Test if textbox show option works correctly.
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('id', 'show-textbox')>
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'show-textbox')>
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('id', 'show-textbox')>
+2025-11-07 21:18:03 :@: utilities.control_objects.textbox :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('id', 'displayed-text')>
+2025-11-07 21:18:03 :@: conftest :@: INFO :@: Test if default state of display-element-on-hover object works correctly.
+2025-11-07 21:18:03 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Scroll to x:'1042', y:'0' action for <pages.rsa_pages.automation_practice_page.AutomationPracticePage object at 0x000002099C437700>
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('id', 'mousehover')>
+2025-11-07 21:18:03 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('xpath', "//a[text()='Top']")>
+2025-11-07 21:18:03 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('xpath', "//a[text()='Reload']")>
+2025-11-07 21:18:03 :@: conftest :@: INFO :@: Test if 'on hover' action works correctly.
+2025-11-07 21:18:03 :@: utilities.control_objects.button :@: DEBUG :@: Hover over element <WebElement: ('id', 'mousehover')>
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('xpath', "//a[text()='Top']")>
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('xpath', "//a[text()='Reload']")>
+2025-11-07 21:18:04 :@: conftest :@: INFO :@: Test if 'top' option works correctly.
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//a[text()='Top']")>
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//a[text()='Top']")>
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Click element <WebElement: ('xpath', "//a[text()='Top']")>
+2025-11-07 21:18:04 :@: conftest :@: INFO :@: Test if 'reload' option works correctly.
+2025-11-07 21:18:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Select action for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:04 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:04 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Scroll to x:'1042', y:'0' action for <pages.rsa_pages.automation_practice_page.AutomationPracticePage object at 0x000002099BF01B00>
+2025-11-07 21:18:04 :@: utilities.control_objects.button :@: DEBUG :@: Hover over element <WebElement: ('id', 'mousehover')>
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//a[text()='Reload']")>
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//a[text()='Reload']")>
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:04 :@: utilities.control_objects.label :@: DEBUG :@: Click element <WebElement: ('xpath', "//a[text()='Reload']")>
+2025-11-07 21:18:05 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption3')>
+2025-11-07 21:18:05 :@: conftest :@: INFO :@: Test if iframe's webpage is not accessible outside iframe.
+2025-11-07 21:18:10 :@: conftest :@: INFO :@: Test if iframe's webpage is accessible inside iframe.
+2025-11-07 21:18:10 :@: utilities.control_objects.iframe :@: DEBUG :@: Enter context manager for ('id', 'courses-iframe')
+2025-11-07 21:18:10 :@: utilities.control_objects.link :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//a[text()='Courses']")>
+2025-11-07 21:18:10 :@: utilities.control_objects.link :@: DEBUG :@: Get HREF action for <WebElement: ('xpath', "//a[text()='Courses']")>
+2025-11-07 21:18:10 :@: utilities.control_objects.iframe :@: DEBUG :@: Exit context manager for ('id', 'courses-iframe')
+2025-11-07 21:18:10 :@: conftest :@: INFO :@: Test if iframe's webpage is still not accessible outside iframe.
+2025-11-07 21:18:15 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:18:18 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:18:18 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:18:18 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:18:19 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:18:19 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:18:19 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:18:19 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:22 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:23 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:23 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:23 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_enabled()' for <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:23 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:24 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:24 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:24 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:24 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:24 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:24 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('id', 'hide-textbox')>
+2025-11-07 21:18:24 :@: utilities.control_objects.textbox :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('id', 'displayed-text')>
+2025-11-07 21:18:24 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:25 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:18:27 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:18:27 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:18:27 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:18:28 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:18:28 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:18:28 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:18:28 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:32 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:18:32 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:33 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:18:33 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:18:33 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:33 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Select action for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:18:33 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:18:33 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[value='radio1']")>
+2025-11-07 21:18:33 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:18:35 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:18:35 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:18:35 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:18:36 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:18:36 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:18:36 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:18:36 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Select action for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Deselect action for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('id', 'checkBoxOption1')>
+2025-11-07 21:18:40 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:18:42 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:18:42 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:18:42 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:18:43 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:18:43 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:18:43 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:18:43 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:47 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:18:47 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:47 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:18:47 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:18:47 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:47 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'Option2' action for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:18:47 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'dropdown-class-example')>
+2025-11-07 21:18:48 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:18:50 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:18:50 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:18:50 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:18:51 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:18:51 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:18:51 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:18:51 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:55 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:55 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:55 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:55 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:55 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:55 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'Poland' action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:55 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing 'Poland'
+2025-11-07 21:18:55 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:18:56 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option 'Poland'
+2025-11-07 21:18:56 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:56 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:18:56 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:56 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:56 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:18:56 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'Greece' by partial value 'gre' action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:56 :@: utilities.control_objects.dropdown :@: DEBUG :@: Start typing 'gre'
+2025-11-07 21:18:56 :@: utilities.control_objects.dropdown :@: DEBUG :@: Wait for suggestions
+2025-11-07 21:18:57 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select option 'Greece'
+2025-11-07 21:18:57 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('id', 'autocomplete')>
+2025-11-07 21:18:57 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:18:59 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:18:59 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:18:59 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:19:00 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:19:00 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:19:00 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:19:00 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:04 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('xpath', '/html/body/div[3]/div[2]/fieldset[2]/div[2]')>
+2025-11-07 21:19:04 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:19:06 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:19:06 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:19:06 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:19:07 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:19:07 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:19:07 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:19:07 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:11 :@: utilities.control_objects.link :@: DEBUG :@: Get text action for <WebElement: ('css selector', '.blinkingText')>
+2025-11-07 21:19:11 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:12 :@: utilities.control_objects.link :@: DEBUG :@: Get HREF action for <WebElement: ('css selector', '.blinkingText')>
+2025-11-07 21:19:12 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:19:14 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:19:14 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:19:14 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:19:15 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:19:15 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:19:15 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:19:15 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:19 :@: utilities.control_objects.iframe :@: DEBUG :@: Enter context manager for ('id', 'courses-iframe')
+2025-11-07 21:19:19 :@: utilities.control_objects.link :@: DEBUG :@: Get HREF action for <WebElement: ('xpath', "//a[text()='Courses']")>
+2025-11-07 21:19:19 :@: utilities.control_objects.iframe :@: DEBUG :@: Exit context manager for ('id', 'courses-iframe')
+2025-11-07 21:19:19 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:19:21 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:19:21 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:19:21 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:19:22 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:19:22 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:19:22 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:19:22 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:26 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeadingsTableStrategy'
+2025-11-07 21:19:26 :@: utilities.control_objects.table :@: DEBUG :@: Get headers action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:19:26 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:27 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeadingsTableStrategy'
+2025-11-07 21:19:27 :@: utilities.control_objects.table :@: DEBUG :@: Get body action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:19:27 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:28 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeadingsTableStrategy'
+2025-11-07 21:19:28 :@: utilities.control_objects.table :@: DEBUG :@: Get table action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:19:28 :@: utilities.control_objects.table :@: DEBUG :@: Get headers action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:19:28 :@: utilities.control_objects.table :@: DEBUG :@: Get body action for <WebElement: ('css selector', '.table-display')>
+2025-11-07 21:19:28 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:19:30 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:19:30 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:19:30 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:19:31 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:19:31 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:19:31 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:19:31 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:35 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeaderBodyTableStrategy'
+2025-11-07 21:19:35 :@: utilities.control_objects.table :@: DEBUG :@: Get headers action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:19:35 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:35 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeaderBodyTableStrategy'
+2025-11-07 21:19:35 :@: utilities.control_objects.table :@: DEBUG :@: Get body action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:19:36 :@: pages.rsa_pages.automation_practice_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/AutomationPractice/'
+2025-11-07 21:19:36 :@: utilities.control_objects.table :@: DEBUG :@: Strategy set to 'HeaderBodyTableStrategy'
+2025-11-07 21:19:36 :@: utilities.control_objects.table :@: DEBUG :@: Get table action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:19:36 :@: utilities.control_objects.table :@: DEBUG :@: Get headers action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:19:36 :@: utilities.control_objects.table :@: DEBUG :@: Get body action for <WebElement: ('css selector', '.tableFixHead table')>
+2025-11-07 21:19:36 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:19:39 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:19:39 :@: conftest :@: INFO :@: Browser name: chrome.
+2025-11-07 21:19:39 :@: conftest :@: INFO :@: Custom browser preferences: {'profile.password_manager_leak_detection': False, 'excludeSwitches': ['enable-logging']}.
+2025-11-07 21:19:40 :@: conftest :@: INFO :@: WebDriver created - instance: chrome.
+2025-11-07 21:19:40 :@: conftest :@: INFO :@: Added WebDriver wait: 10[s].
+2025-11-07 21:19:40 :@: conftest :@: INFO :@: Testing started.
+2025-11-07 21:19:40 :@: conftest :@: INFO :@: Start basic order scenario test for GreenKart Shop page.
+2025-11-07 21:19:40 :@: conftest :@: INFO :@: Test product name: Tomato
+2025-11-07 21:19:40 :@: pages.rsa_pages.green_kart_pages.green_kart_main_page :@: DEBUG :@: Go to 'https://rahulshettyacademy.com/seleniumPractise/#/'
+2025-11-07 21:19:43 :@: pages.rsa_pages.green_kart_pages.green_kart_main_page :@: DEBUG :@: Get title for <pages.rsa_pages.green_kart_pages.green_kart_main_page.GreenKartMainPage object at 0x000002099C3AEE40>
+2025-11-07 21:19:43 :@: conftest :@: INFO :@: Add product to cart and verify if cart info is correct.
+2025-11-07 21:19:43 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('css selector', '.cart-info tr:nth-child(1) td:nth-child(3)')>
+2025-11-07 21:19:43 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('css selector', '.cart-info tr:nth-child(2) td:nth-child(3)')>
+2025-11-07 21:19:43 :@: conftest :@: INFO :@: Verify if cart preview shows correct data.
+2025-11-07 21:19:43 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('css selector', '.cart-icon')>
+2025-11-07 21:19:43 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', '.cart-icon')>
+2025-11-07 21:19:43 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:19:43 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('css selector', '.cart-icon')>
+2025-11-07 21:19:43 :@: conftest :@: INFO :@: Verify if checkout page shows correct data.
+2025-11-07 21:19:43 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[text()='PROCEED TO CHECKOUT']")>
+2025-11-07 21:19:43 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[text()='PROCEED TO CHECKOUT']")>
+2025-11-07 21:19:43 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:19:43 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[text()='PROCEED TO CHECKOUT']")>
+2025-11-07 21:19:44 :@: conftest :@: INFO :@: Verify if delivery page country selection works correctly.
+2025-11-07 21:19:44 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[text()='Place Order']")>
+2025-11-07 21:19:44 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[text()='Place Order']")>
+2025-11-07 21:19:44 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:19:44 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[text()='Place Order']")>
+2025-11-07 21:19:44 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action for <WebElement: ('css selector', 'select')>
+2025-11-07 21:19:44 :@: utilities.control_objects.dropdown :@: DEBUG :@: Check '.is_present()' for <WebElement: ('css selector', 'select')>
+2025-11-07 21:19:44 :@: utilities.control_objects.dropdown :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:19:44 :@: utilities.control_objects.dropdown :@: DEBUG :@: Select 'Poland' action for <WebElement: ('css selector', 'select')>
+2025-11-07 21:19:44 :@: utilities.control_objects.dropdown :@: DEBUG :@: Get text action for <WebElement: ('css selector', 'select')>
+2025-11-07 21:19:45 :@: conftest :@: INFO :@: Verify if delivery page does not proceed without consent.
+2025-11-07 21:19:45 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[type='checkbox']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[text()='Proceed']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[text()='Proceed']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:19:45 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[text()='Proceed']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('css selector', '.errorAlert')>
+2025-11-07 21:19:45 :@: conftest :@: INFO :@: Verify if delivery page proceed with consent.
+2025-11-07 21:19:45 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action for <WebElement: ('css selector', "input[type='checkbox']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.element_to_be_clickable()' for <WebElement: ('css selector', "input[type='checkbox']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:19:45 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Select action for <WebElement: ('css selector', "input[type='checkbox']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[type='checkbox']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('css selector', '.errorAlert')>
+2025-11-07 21:19:45 :@: conftest :@: INFO :@: Verify if order confirmation page works correctly.
+2025-11-07 21:19:45 :@: utilities.control_objects.checkbox_radiobutton :@: DEBUG :@: Check '.is_selected()' for <WebElement: ('css selector', "input[type='checkbox']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action for <WebElement: ('xpath', "//button[text()='Proceed']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.button :@: DEBUG :@: Check '.is_present()' for <WebElement: ('xpath', "//button[text()='Proceed']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.button :@: DEBUG :@: Pre-action: SUCCESS
+2025-11-07 21:19:45 :@: utilities.control_objects.button :@: DEBUG :@: Click element <WebElement: ('xpath', "//button[text()='Proceed']")>
+2025-11-07 21:19:45 :@: utilities.control_objects.label :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('css selector', '.wrapperTwo span')>
+2025-11-07 21:19:45 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('css selector', '.wrapperTwo span')>
+2025-11-07 21:19:45 :@: utilities.control_objects.link :@: DEBUG :@: Check '.is_displayed()' for <WebElement: ('link text', 'Home')>
+2025-11-07 21:19:45 :@: conftest :@: INFO :@: Verify if user is being redirected to home page after successful purchase.
+2025-11-07 21:19:50 :@: conftest :@: INFO :@: Verify if user's cart is reset after successful purchase.
+2025-11-07 21:19:50 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('css selector', '.cart-info tr:nth-child(1) td:nth-child(3)')>
+2025-11-07 21:19:50 :@: utilities.control_objects.label :@: DEBUG :@: Get text action for <WebElement: ('css selector', '.cart-info tr:nth-child(2) td:nth-child(3)')>
+2025-11-07 21:19:50 :@: conftest :@: INFO :@: Testing finished.
+2025-11-07 21:19:53 :@: conftest :@: INFO :@: WebDriver quitted.
+2025-11-07 21:19:53 :@: conftest :@: INFO :@: Logging ended.
