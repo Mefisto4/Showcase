@@ -52,29 +52,17 @@ class AngularPracticeShopPage(_AngularPracticeShopPage):
 
     @property
     def checkout_button(self) -> Button:
-        """
-        Returns checkout button.
-
-        :return: Button
-        """
+        """Returns checkout button."""
         return Button(self.driver, self._locators.CHECKOUT_BUTTON)
 
     @property
     def checkout_view(self) -> CheckoutViewPage:
-        """
-        Returns checkout view page object.
-
-        :return: CheckoutViewPage object.
-        """
+        """Returns checkout view page object."""
         return CheckoutViewPage(self.driver)
 
     @property
     def delivery_view(self) -> DeliveryLocationViewPage:
-        """
-        Returns delivery view page object.
-
-        :return: DeliveryLocationViewPage object.
-        """
+        """Returns delivery view page object."""
         return DeliveryLocationViewPage(self.driver)
 
     def add_product_to_cart(self, product_name: str) -> None:
@@ -128,21 +116,11 @@ class _CheckoutProduct(BaseProduct):
 
     @property
     def name(self) -> str:
-        """
-        Returns product name.
-
-        :return: str
-        """
         self.logger.debug("Get product name")
         return self.web_element.find_element(By.CSS_SELECTOR, "td:nth-child(1) .media-body h4 a").text
 
     @property
     def quantity(self) -> float:
-        """
-        Returns product quantity.
-
-        :return: float
-        """
         self.logger.debug("Get product quantity")
         value = self.web_element.find_element(By.CSS_SELECTOR, "input[class='form-control']").get_attribute("value")
         if isinstance(value, str):
@@ -151,11 +129,6 @@ class _CheckoutProduct(BaseProduct):
 
     @property
     def price(self) -> float:
-        """
-        Returns product price.
-
-        :return: float
-        """
         self.logger.debug("Get product price")
         value = self.web_element.find_element(By.CSS_SELECTOR, "td:nth-child(3)").get_attribute("textContent")
         if isinstance(value, str):
@@ -164,11 +137,6 @@ class _CheckoutProduct(BaseProduct):
 
     @property
     def total_price(self) -> float:
-        """
-        Returns product total_price price - should be equal to (quantity * price).
-
-        :return: float
-        """
         self.logger.debug("Get product total price")
         value = self.web_element.find_element(By.CSS_SELECTOR, "td:nth-child(4)").get_attribute("textContent")
         if isinstance(value, str):
@@ -217,20 +185,12 @@ class CheckoutViewPage(_AngularPracticeShopPage):
 
     @property
     def checkout_button(self) -> Button:
-        """
-        Returns checkout button.
-
-        :return: Button
-        """
+        """Returns checkout button."""
         return Button(self.driver, self._locators.CHECKOUT_BUTTON)
 
     @property
     def continue_shopping_button(self) -> Button:
-        """
-        Returns 'Continue Shopping' button.
-
-        :return: Button
-        """
+        """Returns 'Continue Shopping' button."""
         return Button(self.driver, self._locators.CONTINUE_SHOPPING_BUTTON)
 
     def get_products(self) -> List[_CheckoutProduct]:
@@ -278,11 +238,7 @@ class DeliveryLocationViewPage(_AngularPracticeShopPage):
 
     @property
     def delivery_location_dropdown(self) -> DropdownDynamic:
-        """
-        Returns delivery location dropdown.
-
-        :return: DropdownDynamic
-        """
+        """Returns delivery location dropdown."""
         return DropdownDynamic(
             driver=self.driver,
             dropdown_locator=self._locators.DYNAMIC_DROPDOWN,
@@ -292,38 +248,22 @@ class DeliveryLocationViewPage(_AngularPracticeShopPage):
 
     @property
     def terms_and_conditions_checkbox(self) -> Checkbox:
-        """
-        Returns checkbox for terms and conditions.
-
-        :return: Checkbox
-        """
+        """Returns checkbox for terms and conditions."""
         return Checkbox(self.driver, self._locators.TERMS_AND_CONDITIONS_CHECKBOX)
 
     @property
     def purchase_button(self) -> Button:
-        """
-        Returns 'Purchase' button.
-
-        :return: Button
-        """
+        """Returns 'Purchase' button."""
         return Button(self.driver, self._locators.PURCHASE_BUTTON)
 
     @property
     def alert_message_label(self) -> Label:
-        """
-        Returns purchase message label.
-
-        :return: Label
-        """
+        """Returns purchase message label."""
         return Label(self.driver, self._locators.ALERT_MESSAGE)
 
     @property
     def alert_message_close_button(self) -> Button:
-        """
-        Returns purchase message close button.
-
-        :return: Button
-        """
+        """Returns purchase message close button."""
         return Button(self.driver, self._locators.ALERT_BUTTON)
 
 
