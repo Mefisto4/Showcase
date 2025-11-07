@@ -3,6 +3,7 @@ Contains BaseProduct class as a creator class for Shopping Products factory patt
 """
 
 from abc import ABC, abstractmethod
+from unittest.mock import Mock
 
 from selenium.webdriver.remote.webelement import WebElement
 
@@ -25,35 +26,44 @@ class BaseProduct(ABC):
     @property
     @abstractmethod
     def name(self) -> str:
-        """
-        Returns product name.
-
-        :return: str
-        """
+        """Returns product name."""
 
     @property
     @abstractmethod
     def price(self) -> float:
-        """
-        Returns product price.
-
-        :return: float
-        """
+        """Returns product price."""
 
     @property
     @abstractmethod
     def quantity(self) -> float:
-        """
-        Returns product quantity.
-
-        :return: float
-        """
+        """Returns product quantity."""
 
     @property
     @abstractmethod
     def total_price(self) -> float:
-        """
-        Returns product total_price price - should be equal to (quantity * price).
+        """Returns product total_price price - should be equal to (quantity * price)."""
 
-        :return: float
-        """
+
+class EmptyProductPlaceholder(BaseProduct):
+    """
+    Empty product placeholder.
+    """
+
+    def __init__(self) -> None:
+        super().__init__(Mock())
+
+    @property
+    def name(self) -> str:
+        return "None"
+
+    @property
+    def price(self) -> float:
+        return -9.99
+
+    @property
+    def quantity(self) -> float:
+        return -9.99
+
+    @property
+    def total_price(self) -> float:
+        return -9.99
