@@ -40,38 +40,22 @@ class AutomationPracticePage(BasePage):
 
     @property
     def radiobutton_1(self) -> Radiobutton:
-        """
-        Returns 'Radio1' radiobutton.
-
-        :return: Radiobutton
-        """
+        """Returns 'Radio1' radiobutton."""
         return Radiobutton(self.driver, self._locators.RADIOBUTTON_1)
 
     @property
     def radiobutton_2(self) -> Radiobutton:
-        """
-        Returns 'Radio2' radiobutton.
-
-        :return: Radiobutton
-        """
+        """Returns 'Radio2' radiobutton."""
         return Radiobutton(self.driver, self._locators.RADIOBUTTON_2)
 
     @property
     def radiobutton_3(self) -> Radiobutton:
-        """
-        Returns 'Radio3' radiobutton.
-
-        :return: Radiobutton
-        """
+        """Returns 'Radio3' radiobutton."""
         return Radiobutton(self.driver, self._locators.RADIOBUTTON_3)
 
     @property
     def dropdown_dynamic(self) -> DropdownDynamic:
-        """
-        Returns dynamic (auto-suggested) dropdown.
-
-        :return: DropdownDynamic
-        """
+        """Returns dynamic (auto-suggested) dropdown."""
         return DropdownDynamic(
             driver=self.driver,
             dropdown_locator=self._locators.DYNAMIC_DROPDOWN,
@@ -81,182 +65,102 @@ class AutomationPracticePage(BasePage):
 
     @property
     def dropdown_static(self) -> DropdownStatic:
-        """
-        Returns static dropdown.
-
-        :return: DropdownStatic
-        """
+        """Returns static dropdown."""
         return DropdownStatic(self.driver, self._locators.STATIC_DROPDOWN)
 
     @property
     def checkbox_1(self) -> Checkbox:
-        """
-        Returns 'Option1' checkbox.
-
-        :return: Checkbox
-        """
+        """Returns 'Option1' checkbox."""
         return Checkbox(self.driver, self._locators.CHECKBOX_1)
 
     @property
     def checkbox_2(self) -> Checkbox:
-        """
-        Returns 'Option2' checkbox.
-
-        :return: Checkbox
-        """
+        """Returns 'Option2' checkbox."""
         return Checkbox(self.driver, self._locators.CHECKBOX_2)
 
     @property
     def checkbox_3(self) -> Checkbox:
-        """
-        Returns 'Option3' checkbox.
-
-        :return: Checkbox
-        """
+        """Returns 'Option3' checkbox."""
         return Checkbox(self.driver, self._locators.CHECKBOX_3)
 
     @property
     def open_window_button(self) -> Button:
-        """
-        Returns 'Open Window' button.
-
-        :return: Button
-        """
+        """Returns 'Open Window' button."""
         return Button(self.driver, self._locators.OPEN_WINDOW_BUTTON)
 
     @property
     def open_tab_button(self) -> Button:
-        """
-        Returns 'Open Tab' button.
-
-        :return: Button
-        """
+        """Returns 'Open Tab' button."""
         return Button(self.driver, self._locators.OPEN_TAB_BUTTON)
 
     @property
     def alert_textbox(self) -> Textbox:
-        """
-        Returns alert example textbox.
-
-        :return: Textbox
-        """
+        """Returns alert example textbox."""
         return Textbox(self.driver, self._locators.ALERT_TEXTBOX)
 
     @property
     def alert_button(self) -> Button:
-        """
-        Returns 'Alert' button.
-
-        :return: Button
-        """
+        """Returns 'Alert' button."""
         return Button(self.driver, self._locators.ALERT_BUTTON)
 
     @property
     def popup_button(self) -> Button:
-        """
-        Returns 'Confirm' button.
-
-        :return: Button
-        """
+        """Returns 'Confirm' button."""
         return Button(self.driver, self._locators.POPUP_BUTTON)
 
     @property
     def table_static(self) -> Table:
-        """
-        Returns 'Web Table Example' table.
-
-        :return: Table
-        """
+        """Returns 'Web Table Example' table."""
         return Table(self.driver, self._locators.WEB_TABLE_STATIC, HeadingsTableStrategy)
 
     @property
     def table_fixed_header(self) -> Table:
-        """
-        Returns 'Web Table Fixed header' table.
-
-        :return: Table
-        """
+        """Returns 'Web Table Fixed header' table."""
         return Table(self.driver, self._locators.WEB_TABLE_FIXED_HEADER, HeaderBodyTableStrategy)
 
     @property
     def table_fixed_label(self) -> Label:
-        """
-        Returns 'Web Table Fixed header' footer label.
-
-        :return: Label
-        """
+        """Returns 'Web Table Fixed header' footer label."""
         return Label(self.driver, self._locators.WEB_TABLE_FIXED_HEADER_LABEL)
 
     @property
     def hide_button(self) -> Button:
-        """
-        Returns 'Hide' button.
-
-        :return: Button
-        """
+        """Returns 'Hide' button."""
         return Button(self.driver, self._locators.HIDE_BUTTON)
 
     @property
     def show_button(self) -> Button:
-        """
-        Returns 'Show' button.
-
-        :return: Button
-        """
+        """Returns 'Show' button."""
         return Button(self.driver, self._locators.SHOW_BUTTON)
 
     @property
     def hide_show_textbox(self) -> Textbox:
-        """
-        Returns 'Hide/Show Example' textbox.
-
-        :return: Textbox
-        """
+        """Returns 'Hide/Show Example' textbox."""
         return Textbox(self.driver, self._locators.HIDE_SHOW_TEXTBOX)
 
     @property
     def mouse_hover_button(self) -> Button:
-        """
-        Returns 'Mouse Hover' button.
-
-        :return: Button
-        """
+        """Returns 'Mouse Hover' button."""
         return Button(self.driver, self._locators.MOUSE_HOVER_BUTTON)
 
     @property
     def mouse_hover_content_top(self) -> Label:
-        """
-        Returns 'Mouse Hover' list content label.
-
-        :return: Label
-        """
+        """Returns 'Mouse Hover' list content label."""
         return Label(self.driver, self._locators.MOUSE_HOVER_CONTENT_TOP)
 
     @property
     def mouse_hover_content_reload(self) -> Label:
-        """
-        Returns 'Mouse Hover' list content label.
-
-        :return: Label
-        """
+        """Returns 'Mouse Hover' list content label."""
         return Label(self.driver, self._locators.MOUSE_HOVER_CONTENT_RELOAD)
 
     @property
     def iframe(self) -> IFrame:
-        """
-        Returns 'iFrame Example' iframe.
-
-        :return: IFrame
-        """
+        """Returns 'iFrame Example' iframe."""
         return IFrame(self.driver, self._locators.IFRAME, RahulShettyAcademyPage)
 
     @property
     def blinking_text_link(self) -> Link:
-        """
-        Returns blinking text link.
-
-        :return: Link
-        """
+        """Returns blinking text link."""
         return Link(self.driver, self._locators.BLINKING_TEXT_LINK)
 
 

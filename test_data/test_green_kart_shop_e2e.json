@@ -1,0 +1,26 @@
+{
+  "order_basic": [
+    {
+      "page_title": "GreenKart - veg and fruits kart",
+      "product_name": "Tomato",
+      "product_price": 16.0,
+      "product_quantity": 1.0,
+      "delivery_country": "Poland"
+    }
+  ],
+  "page_search_box": [
+    {
+      "placeholder": 0
+    }
+  ],
+  "products_removal": [
+    {
+      "placeholder": 0
+    }
+  ],
+  "discount_code": [
+    {
+      "placeholder": 0
+    }
+  ]
+}

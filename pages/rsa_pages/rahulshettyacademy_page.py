@@ -30,11 +30,7 @@ class RahulShettyAcademyPage(BasePage):
 
     @property
     def courses_link(self) -> Link:
-        """
-        Returns link to courses page.
-
-        :return: Link
-        """
+        """Returns link to courses page."""
         return Link(self.driver, self._locators.COURSES_LINK)
 
 
